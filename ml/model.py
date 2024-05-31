@@ -12,15 +12,14 @@ from transformers import pipeline
 
 @dataclass
 class SentimentPrediction:
-    """Class representing a sentiment prediction result."""
+    """Класс, представляющий результат предсказания настроения."""
 
     label: str
     score: float
 
 
 def load_model():
-    """Load a pre-trained spam classification model.
-    """
+    """Загрузка предварительно обученной модели"""
 
     model_hf = pipeline('text-classification', model='skandavivek2/spam-classifier', device=-1)
 
