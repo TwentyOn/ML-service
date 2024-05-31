@@ -6,14 +6,14 @@ from ml.model import load_model
 model = None
 app = FastAPI()
 
-
+# Добавляем предсказание модели
 class SentimentResponse(BaseModel):
-    text: str
-    sentiment_label: str
-    sentiment_score: float
+    text: str # тело запроса
+    sentiment_label: str # класс предсказания
+    sentiment_score: float # значение предсказания
 
 
-# create a route
+
 @app.get("/")
 def index():
     return {"text": "Sentiment Analysis"}
@@ -26,7 +26,7 @@ def startup_event():
     model = load_model()
 
 
-# Your FastAPI route handlers go here
+# GET-запрос для получения предсказания по заданному тексту
 @app.get("/predict")
 def predict_sentiment(text: str):
     sentiment = model(text)
