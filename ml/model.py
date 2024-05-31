@@ -21,7 +21,7 @@ class SentimentPrediction:
 def load_model():
     """Загрузка предварительно обученной модели"""
 
-    model_hf = pipeline('text-classification', model='skandavivek2/spam-classifier', device=-1)
+    model = pipeline('text-classification', model='skandavivek2/spam-classifier', device=-1)
 
     def model(text: str) -> SentimentPrediction:
         pred = model_hf(text)
