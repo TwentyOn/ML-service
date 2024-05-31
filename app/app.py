@@ -19,7 +19,6 @@ def index():
     return {"text": "Sentiment Analysis"}
 
 
-# Register the function to run during startup
 @app.on_event("startup")
 def startup_event():
     global model
