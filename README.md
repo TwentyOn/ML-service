@@ -1,10 +1,10 @@
 # ML-service
 Данный репозиторий представляет собой реализацию приложения для проведения экспериментов классификации текста на 2 класса спам / не спам
 # Установка необходимых библиотек:
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 # Тесты 
 Тесты можно запустить следующей командой:
-'''pytest tests/test_ml.py'''
+```pytest tests/test_ml.py```
 # Запуск web-приложения
 Запуск приложения осуществляется с помощью FAST-API следующей командой:
-uvicorn app.app:app --host 127.0.0.1 --port 8080
+```uvicorn app.app:app --host 127.0.0.1 --port 8080```
