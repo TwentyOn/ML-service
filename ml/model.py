@@ -24,7 +24,7 @@ def load_model():
     model = pipeline('text-classification', model='skandavivek2/spam-classifier', device=-1)
 
     def model(text: str) -> SentimentPrediction:
-        pred = model_hf(text)
+        pred = model(text)
         pred_best_class = pred[0]
         return SentimentPrediction(
             label=pred_best_class["label"],
