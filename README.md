@@ -3,5 +3,5 @@
 # requirements
 pip install -r requirements.txt
 # Тесты 
-pytest tests/test_ml.py
+### pytest tests/test_ml.py
 
