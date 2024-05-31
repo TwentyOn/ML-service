@@ -6,7 +6,7 @@ from ml.model import load_model
 model = None
 app = FastAPI()
 
-# Добавляем предсказание модели
+# формат предсказания модели
 class SentimentResponse(BaseModel):
     text: str # тело запроса
     sentiment_label: str # класс предсказания
