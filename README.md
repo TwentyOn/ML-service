@@ -6,5 +6,6 @@ pip install -r requirements.txt
 # Тесты 
 Тесты можно запустить следующей командой:
 pytest tests/test_ml.py
-# Для запуска web-приложения с помощью FAST-API:
-uvicorn app.app:app --host 0.0.0.0 --port 8080
+# Запуск web-приложения
+Запуск приложения осуществляется с помощью FAST-API следующей командой:
+uvicorn app.app:app --host 127.0.0.1 --port 8080
